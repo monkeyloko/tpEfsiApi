@@ -16,21 +16,24 @@
           <input type="text" class="form-control" id="inputTitulo">
         </div>
         <div class="mb-3">
-          <label id ="inputAnio" class="form-label">Año</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label  class="form-label">Año</label>
+          <input id ="inputAnio" type="text" class="form-control">
         </div>
 
         <div class="mb-3 form-check">
           <label class="form-check-label">Tipo</label>
         <select id="selectTipo">
-          <option value="Pelicula">Pelicula</option>
-          <option value ="Serie">Serie</option>
+          <option value="movie">Pelicula</option>
+          <option value="todo">Todo</option>
+          <option value ="series">Serie</option>
         </select>
         </div>
 
         <button type="submit" class="btn btn-primary" id="">Submit</button>
       </form>
-      <div id="divPelis"></div>
+      <table id="tablePelis">
+
+      </table>
 
       <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
