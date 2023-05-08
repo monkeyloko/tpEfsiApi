@@ -12,10 +12,7 @@ function enviarForm(evento) {
 
 function getMovie(titulo, year, tipo) {
     console.log(year);
-    if (tipo == "todo") {
-        tipo = "";
-    }
-
+    tablaPelis.innerHTML="";
     titulo = titulo.replace(/\s+/g, '_');
 
     console.log(`https://www.omdbapi.com/?apikey=a004e2e7&s=${titulo}&y=${year}&type=${tipo}`)
@@ -24,7 +21,7 @@ function getMovie(titulo, year, tipo) {
         .then(res => res.json())
         .then(res => {
             arr = res.Search;
-
+            console.log(arr);
             if (arr != null) {
 
                 const tableHead = document.createElement("thead");
@@ -36,10 +33,13 @@ function getMovie(titulo, year, tipo) {
                 tableH2.innerHTML = "Año";
                 const tableH3 = document.createElement("th");
                 tableH3.innerHTML = "Tipo";
+               // const tableH4 = document.createElement("th");
+                //tableH3.innerHTML = "ver";
 
                 tableRow.appendChild(tableH);
                 tableRow.appendChild(tableH2);
                 tableRow.appendChild(tableH3);
+                //tableRow.appendChild(tableH4);
                 tableHead.appendChild(tableRow);
 
                 tablaPelis.appendChild(tableHead);
@@ -55,10 +55,22 @@ function getMovie(titulo, year, tipo) {
                     year.innerHTML = pelicula.Year;
                     const tipo = document.createElement("td");
                     tipo.innerHTML = pelicula.Type;
+                    /*const detalleRow = document.createElement("td");
+                    const detalleBoton = document.createElement("a");
+                    detalleBoton
+
+                    detalleBoton.classList.add("btn")
+                    detalleBoton.classList.add("btn-primary")
+                    detalleBoton.setAttribute("href", "detallePeli.html")
+                    */
                     peliRow.appendChild(titulo);
                     peliRow.appendChild(year);
                     peliRow.appendChild(tipo);
+                    //peliRow.appendChild(detalleRow)
+                    
                     tableBody.appendChild(peliRow);
+                    
+
                 });
                 tablaPelis.appendChild(tableBody);
             }
