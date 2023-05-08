@@ -10,18 +10,27 @@
   <title>Buscador de Peliculas</title>
 </head>
 
-<body class="container mt-4">
+<body class="container mt-4 mb-4">
   <h1>Buscador de Peliculas!</h1>
 
   <form id="formPeliculas">
 
     <div class="mb-3">
-      <label class="form-label">Nombre pelicula</label>
+      <label class="form-label">Titulo serie/pelicula</label>
       <input type="text" class="form-control" id="inputTitulo">
     </div>
     <div class="mb-3">
       <label class="form-label">Año</label>
       <input id="inputAnio" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Temporada</label>
+      <input id="season" type="number" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Episodio</label>
+      <input id="episode" type="number" class="form-control">
     </div>
 
     <div class="mb-3 form-check">
@@ -36,7 +45,7 @@
     
     <button type="submit" class="btn btn-primary" id="">Submit</button>
   </form>
-  <table id="tablaPelis" class="container mt-3">
+  <table id="tablaPelis" class="container mt-3 mb-3">
 
 
 
