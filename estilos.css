@@ -1,46 +1,143 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Fondo de la página */
 body {
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .form-control {
-    border-radius: 0;
-  }
-  
-  .btn-primary {
-    border-radius: 0;
-  }
-  
-  table {
-    margin-top: 20px;
-  }
-  
-  thead {
-    background-color: #f0f0f0;
-  }
-  
-  th, td {
-    padding: 10px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
+  background-color: #222;
+
+
+}
+
+/* Títulos */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Etiquetas */
+label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+}
+
+#formPeliculas {}
+
+.form-check {
+  padding-left: 0;
+}
+
+/* Campos de entrada */
+.form-control {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Botón de envío */
+.btn-primary {
+
+  background-color: #45a29e;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+
+
+}
+
+.btn-primary:hover {
+  background-color: #2c7873;
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.botonTabla {
+  border-radius: 10%;
+  background-color: #45a29e;
+  border: none;
+  color: white;
+  font-size: 1;
+  font-weight: 10;
+  transition: all 0.2s ease-in-out;
+  line-height: 50px;
+  display: flex;
+  display: inline-flex;
+
+
+}
+
+.divBoton {
+  height: 100%;
+}
+
+.botonTabla:hover {
+  background-color: #2c7873;
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Tabla */
+table {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+table thead tr {
+  background-color: #45a29e;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+table th {
+  font-weight: 300;
+  padding: 1.5rem;
+}
+
+table td {
+  padding: 1.5rem;
+}
+
+table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Select */
+select {
+  display: flex;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: rgba(0, 0, 0, 0.773);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
