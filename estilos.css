@@ -141,3 +141,39 @@ select {
   margin-bottom: 1rem;
   padding: 1.5rem;
 }
+
+.pelicula-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  color: #fff;
+}
+
+.pelicula-container img {
+  max-width: 15%;
+  margin-right: 20px;
+}
+
+.pelicula-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pelicula-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.pelicula-info p {
+  margin: 5px 0;
+}
+
+.pelicula-info .plot {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

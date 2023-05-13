@@ -1,10 +1,48 @@
 
+divtest = document.getElementById("test");
 divPelis = document.getElementById("divPelis");
 let tablaPelis = document.getElementById("tablaPelis");
 if (document.getElementById("formPeliculas")) {
     document.getElementById("formPeliculas").addEventListener("submit", enviarForm);
 }
+if (document.URL.includes("detallePeli.html")) {
+    const parametros = new URLSearchParams(window.location.search);
+    const id = parametros.get("id");
+    console.log(id);
 
+    const movieData = fetch(`https://www.omdbapi.com/?apikey=a004e2e7&i=${id}`)
+        .then(res => res.json())
+        .then(res => {
+            let divDetalle = document.createElement("div")
+            divDetalle.classList.add("pelicula-info")
+
+            let img = document.createElement("img")
+            img.src = res.Poster;
+            let titulo = document.createElement("h1")
+            titulo.innerHTML = res.Title
+            let año = document.createElement("p")
+            año.innerHTML = res.Year
+            let genero = document.createElement("p")
+            genero.innerHTML = res.Genre
+
+            let divPlot = document.createElement("div")
+            divPlot.classList.add("plot")
+
+            let plot = document.createElement("p")
+            plot.innerHTML = res.Plot
+
+
+
+            divDetalle.appendChild(img)
+            divDetalle.appendChild(titulo)
+            divDetalle.appendChild(año)
+            divDetalle.appendChild(genero)
+            divPlot.appendChild(plot)
+            divDetalle.appendChild(divPlot)
+            divtest.appendChild(divDetalle)
+        });
+
+}
 function enviarForm(evento) {
     evento.preventDefault()
     let titulo = document.getElementById("inputTitulo").value;
@@ -12,11 +50,13 @@ function enviarForm(evento) {
     let tipo = document.getElementById("selectTipo").value;
     let season = document.getElementById("season").value;
     let episode = document.getElementById("episode").value;
-
     getMovie(titulo, year, tipo, season, episode);
 }
+
 function mostrarDetalles(id) {
-    console.log(id);
+    let s = "a";
+
+    divPelis.innerHTML = s;
 }
 
 function getMovie(titulo, year, tipo, season, episode) {
@@ -84,9 +124,7 @@ function getMovie(titulo, year, tipo, season, episode) {
                         detalleBoton.classList.add("btn")
                         detalleBoton.classList.add("btn-primary")
                         detalleBoton.classList.add("botonTabla")
-                        detalleBoton.setAttribute("href", "detallePeli.html")
-                        detalleBoton.onclick = () => mostrarDetalles(peliculaId);
-
+                        detalleBoton.setAttribute("href", "detallePeli.html?id=" + peliculaId);
                         peliRow.appendChild(titulo);
                         peliRow.appendChild(year);
                         peliRow.appendChild(tipo);
@@ -100,6 +138,8 @@ function getMovie(titulo, year, tipo, season, episode) {
                     tablaPelis.appendChild(tableBody);
                 }
                 else {
+                    console.log("a")
+                    let peliculaId = res.imdbID
                     const tableHead = document.createElement("thead");
                     const tableRow = document.createElement("tr");
 
@@ -140,7 +180,7 @@ function getMovie(titulo, year, tipo, season, episode) {
                     detalleBoton.classList.add("btn")
                     detalleBoton.classList.add("btn-primary")
                     detalleBoton.classList.add("botonTabla")
-                    detalleBoton.setAttribute("href", "detallePeli.html")
+                    detalleBoton.setAttribute("href", "detallePeli.html?id=" + peliculaId);
 
                     tablaPelis.appendChild(tableHead);
                     const tableBody = document.createElement("tbody");
