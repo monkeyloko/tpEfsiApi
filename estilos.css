@@ -46,8 +46,6 @@ label {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-
-
 /* Botón de envío */
 .btn-primary {
 
@@ -104,6 +102,7 @@ table {
   margin: auto;
   text-align: center;
   width: 100%;
+  overflow-x: auto;
 }
 
 table thead tr {
@@ -148,18 +147,20 @@ select {
   justify-content: space-between;
   align-items: center;
   margin: 20px auto;
-  width: 80%;
+  width: 60%;
   color: #fff;
 }
 
 .pelicula-container img {
-  max-width: 15%;
+  max-width: 90%;
   margin-right: 20px;
+  margin: auto;
+  display: block;
 }
 
 .pelicula-info {
-  display: flex;
-  flex-direction: column;
+  width: auto;
+
   justify-content: center;
 }
 
@@ -169,11 +170,16 @@ select {
 }
 
 .pelicula-info p {
-  margin: 5px 0;
+  align-items: center;
+  display: flex;
+  margin: 1%;
+  justify-content: center;
+
 }
 
 .pelicula-info .plot {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 5%;
 }

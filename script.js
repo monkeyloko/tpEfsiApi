@@ -30,16 +30,14 @@ if (document.URL.includes("detallePeli.html")) {
 
             let plot = document.createElement("p")
             plot.innerHTML = res.Plot
-
-
-
-            divDetalle.appendChild(img)
             divDetalle.appendChild(titulo)
+            divDetalle.appendChild(img)
+
             divDetalle.appendChild(año)
             divDetalle.appendChild(genero)
             divPlot.appendChild(plot)
-            divDetalle.appendChild(divPlot)
             divtest.appendChild(divDetalle)
+            divtest.appendChild(divPlot)
         });
 
 }
