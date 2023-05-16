@@ -1,15 +1,14 @@
-/* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-/* Fondo de la página */
+
 body {
   background-color: #222;
 
 
 }
 
-/* Títulos */
+
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 3rem;
@@ -19,7 +18,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Etiquetas */
 label {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -33,7 +31,6 @@ label {
   padding-left: 0;
 }
 
-/* Campos de entrada */
 .form-control {
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -46,7 +43,6 @@ label {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Botón de envío */
 .btn-primary {
 
   background-color: #45a29e;
@@ -90,7 +86,6 @@ label {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Tabla */
 table {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -126,7 +121,6 @@ table tbody tr:hover {
   cursor: pointer;
 }
 
-/* Select */
 select {
   display: flex;
   width: 100%;
